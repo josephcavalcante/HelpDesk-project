@@ -15,9 +15,9 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public void save(PostUsuarioDTO dto) {
         Usuario usuario = new Usuario();
-        usuario.setNome(dto.getNome());
-        usuario.setSenha(dto.getSenha());
-        usuario.setUsername(dto.getUsername());
+        usuario.setNome(dto.nome());
+        usuario.setSenha(dto.senha());
+        usuario.setUsername(dto.username());
         this.usuarioDao.save(usuario);
     }
 }
