@@ -5,9 +5,5 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class PostUsuarioDTO implements Serializable {
-    private String nome;
-    private String username;
-    private String senha;
-    private String confirmacaoSenha;
+public record PostUsuarioDTO (String nome, String username, String senha, String confirmacaoSenha)  {
 }
