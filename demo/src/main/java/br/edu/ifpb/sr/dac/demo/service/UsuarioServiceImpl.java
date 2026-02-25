@@ -14,8 +14,10 @@ import java.util.stream.Collectors;
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
 
-    @Autowired
-    private UsuarioDao usuarioDao;
+    private final UsuarioDao usuarioDao;
+    public UsuarioServiceImpl (UsuarioDao usuarioDao){
+        this.usuarioDao = usuarioDao;
+    }
 
     @Override
     @Transactional

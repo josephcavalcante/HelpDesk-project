@@ -13,9 +13,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/usuarios")
 public class UsuarioController {
+    private final UsuarioService usuarioService;
 
-    @Autowired
-    private UsuarioService usuarioService;
+    public UsuarioController(UsuarioService usuarioService){
+        this.usuarioService = usuarioService;
+
+    }
 
     @PostMapping
     public ResponseEntity<Boolean> postUsuario(@RequestBody PostUsuarioDTO dto) {
