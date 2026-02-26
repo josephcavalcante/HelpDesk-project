@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/validation/SenhasIguais.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/validation/SenhasIguaisValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -95,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1772031214740</updated>
       <workItem from="1772031216009" duration="348000" />
-      <workItem from="1772107086657" duration="2437000" />
+      <workItem from="1772107086657" duration="6971000" />
     </task>
     <servers />
   </component>

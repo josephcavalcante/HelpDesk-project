@@ -24,7 +24,6 @@ public class SecurityConfig {
                         .requestMatchers("/v1/usuarios/**").permitAll()
                         .anyRequest().authenticated()
                 );
-
         return http.build();
     }
 }
