@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="" />
+    <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/UsuarioRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,10 +21,24 @@
       <entry key="_C:/Users/nicho/Downloads/HelpDesk" value="3AAN3LmeApYHDwWcT34NGEMVusf" />
     </persistenceIdMap>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="3AAN3LmeApYHDwWcT34NGEMVusf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,8 +49,11 @@
     "Maven.demo [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "pratica",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/nicho/Downloads/HelpDesk",
@@ -75,6 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1772031214740</updated>
       <workItem from="1772031216009" duration="348000" />
+      <workItem from="1772107086657" duration="1204000" />
     </task>
     <servers />
   </component>
