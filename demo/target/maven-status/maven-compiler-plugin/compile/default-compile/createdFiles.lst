@@ -3,6 +3,7 @@ br\edu\ifpb\sr\dac\demo\DemoApplication.class
 br\edu\ifpb\sr\dac\demo\service\UsuarioService.class
 br\edu\ifpb\sr\dac\demo\dao\UsuarioDao.class
 br\edu\ifpb\sr\dac\demo\service\UsuarioServiceImpl.class
-br\edu\ifpb\sr\dac\demo\controller\HelloWorldController.class
 br\edu\ifpb\sr\dac\demo\controller\UsuarioController.class
+br\edu\ifpb\sr\dac\demo\dto\GetUsuariosDTO.class
+br\edu\ifpb\sr\dac\demo\config\SecurityConfig.class
 br\edu\ifpb\sr\dac\demo\dto\PostUsuarioDTO.class
