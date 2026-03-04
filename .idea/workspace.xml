@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model/Chamado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model/enums/StatusChamado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/db/changelog/changesets/002-create-table-chamado.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dao/ChamadoDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/db/changelog/db.changelog-master.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +100,8 @@
       <workItem from="1772031216009" duration="348000" />
       <workItem from="1772107086657" duration="6971000" />
       <workItem from="1772545685836" duration="594000" />
-      <workItem from="1772562622270" duration="3115000" />
+      <workItem from="1772562622270" duration="3587000" />
+      <workItem from="1772638379234" duration="296000" />
     </task>
     <servers />
   </component>
