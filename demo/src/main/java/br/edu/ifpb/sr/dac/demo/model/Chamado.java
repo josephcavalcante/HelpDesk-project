@@ -14,4 +14,6 @@ public class Chamado {
     private String titulo;
     private String descricao;
     private StatusChamado status;
+    private String dataCriacao;
+    private Long usuarioId;
 }
