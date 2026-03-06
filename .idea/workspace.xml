@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/ChamadoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/ChamadoRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/ChamadoResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/ChamadoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model/Chamado.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model/Chamado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dao/ChamadoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dao/ChamadoDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +101,11 @@
       <workItem from="1772107086657" duration="6971000" />
       <workItem from="1772545685836" duration="594000" />
       <workItem from="1772562622270" duration="3587000" />
-      <workItem from="1772638379234" duration="4754000" />
+      <workItem from="1772638379234" duration="5125000" />
+      <workItem from="1772645420894" duration="607000" />
+      <workItem from="1772722976016" duration="1640000" />
+      <workItem from="1772729540675" duration="1212000" />
+      <workItem from="1772810766661" duration="159000" />
     </task>
     <servers />
   </component>
