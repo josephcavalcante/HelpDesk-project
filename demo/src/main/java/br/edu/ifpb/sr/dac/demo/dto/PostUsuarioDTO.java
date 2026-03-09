@@ -4,6 +4,6 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-@Data
-public record PostUsuarioDTO (String nome, String username, String senha, String confirmacaoSenha)  {
+
+public record PostUsuarioDTO (String nome, String username, String senha, String confirmacaoSenha, Long idUsuario)  {
 }

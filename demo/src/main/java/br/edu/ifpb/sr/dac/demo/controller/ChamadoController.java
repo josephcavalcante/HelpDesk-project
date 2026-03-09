@@ -2,7 +2,7 @@ package br.edu.ifpb.sr.dac.demo.controller;
 
 import br.edu.ifpb.sr.dac.demo.dto.GetChamadosDTO;
 import br.edu.ifpb.sr.dac.demo.dto.PostChamadoDTO;
-import br.edu.ifpb.sr.dac.demo.service.ChamadoService;
+import br.edu.ifpb.sr.dac.demo.service.chamado.ChamadoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,13 +18,12 @@ public class ChamadoController {
     }
 
     @PostMapping
-    public ResponseEntity<Boolean> postChamado(@RequestBody PostChamadoDTO dto) {
+    public void postChamado(@RequestBody PostChamadoDTO dto) {
         this.chamadoService.save(dto);
-        return ResponseEntity.ok(Boolean.TRUE);
     }
 
     @GetMapping("/usuario/:id")
-    public ResponseEntity<List<GetChamadosDTO>> getChamados(@PathVariable Long id) {
-        return ResponseEntity.ok(this.chamadoService.findAllByUsuario(id));
+    public ResponseEntity<List<GetChamadosDTO>> getAllByUsuario(@PathVariable Long idUsuario) {
+        return ResponseEntity.ok(this.chamadoService.findAllByUsuario(idUsuario));
     }
 }

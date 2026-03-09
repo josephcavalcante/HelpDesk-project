@@ -1,4 +1,4 @@
-package br.edu.ifpb.sr.dac.demo.service;
+package br.edu.ifpb.sr.dac.demo.service.chamado;
 
 import br.edu.ifpb.sr.dac.demo.dao.ChamadoDao;
 import br.edu.ifpb.sr.dac.demo.dao.UsuarioDao;
@@ -9,7 +9,6 @@ import br.edu.ifpb.sr.dac.demo.model.Chamado;
 import br.edu.ifpb.sr.dac.demo.model.Usuario;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -29,8 +28,8 @@ public class ChamadoServiceImpl implements ChamadoService {
     @Override
     @Transactional
     public void save(PostChamadoDTO dto) {
+        Usuario usuario = this.usuarioDao.findById(dto.idUsuario()).orElseThrow(() -> new RuntimeException("Dono do chamado não encontrado"));
         Chamado chamado = this.chamadoMapper.toEntity(dto);
-        Usuario usuario = this.usuarioDao.findById(dto.idUsuario()).get();
         chamado.setUsuario(usuario);
         chamado.setDataAbertura(LocalDateTime.now());
         this.chamadoDao.save(chamado);

@@ -12,5 +12,4 @@ public interface UsuarioMapper {
     PostUsuarioDTO toPostUsuarioDto(Usuario usuario);
 
     Usuario toUsuarioEntity(PostUsuarioDTO dto);
-
 }
