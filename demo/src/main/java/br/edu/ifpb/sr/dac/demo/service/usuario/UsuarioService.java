@@ -2,13 +2,18 @@ package br.edu.ifpb.sr.dac.demo.service.usuario;
 
 import br.edu.ifpb.sr.dac.demo.dto.GetUsuariosDTO;
 import br.edu.ifpb.sr.dac.demo.dto.PostUsuarioDTO;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
 public interface UsuarioService {
     void save(PostUsuarioDTO dto);
+
     void saveAdmin(PostUsuarioDTO dto);
+
     List<GetUsuariosDTO> findAll();
-    List<GetUsuariosDTO> findAllAdmin();
+
+    Page<GetUsuariosDTO> findAllAdmin(Pageable pageable);
 
 }

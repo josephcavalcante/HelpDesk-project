@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="">
+    <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="refact: ajusta ordem de atribuição de campos em mapeadores e corrige tipo de parâmetro no UsuarioDao">
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapperImpl.java" afterDir="false" />
@@ -33,6 +35,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "josephcavalcante"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/josephcavalcante/HelpDesk-project",
+    "accountId": "626c906b-b34d-4f7a-b626-c893d6559e8c"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -44,35 +58,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.demo [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [package].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;pratica&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nicho/Downloads/HelpDesk/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.demo [clean,install].executor": "Run",
+    "Maven.demo [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.DemoApplication.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "Merging pratica",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/nicho/Downloads/HelpDesk/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nicho\Downloads\HelpDesk\demo\src\main\java\br\edu\ifpb\sr\dac\demo\model" />
@@ -114,6 +128,15 @@
       <workItem from="1773052510174" duration="2188000" />
       <workItem from="1773151819143" duration="736000" />
     </task>
+    <task id="LOCAL-00001" summary="refact: ajusta ordem de atribuição de campos em mapeadores e corrige tipo de parâmetro no UsuarioDao">
+      <option name="closed" value="true" />
+      <created>1773156843458</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773156843458</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +152,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refact: ajusta ordem de atribuição de campos em mapeadores e corrige tipo de parâmetro no UsuarioDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="refact: ajusta ordem de atribuição de campos em mapeadores e corrige tipo de parâmetro no UsuarioDao" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

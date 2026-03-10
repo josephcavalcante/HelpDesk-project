@@ -7,6 +7,8 @@ import br.edu.ifpb.sr.dac.demo.dto.UsuarioMapper;
 import br.edu.ifpb.sr.dac.demo.model.Cargo;
 import br.edu.ifpb.sr.dac.demo.model.Usuario;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +18,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     private final UsuarioDao usuarioDao;
     private final UsuarioMapper usuarioMapper;
-    public UsuarioServiceImpl (UsuarioDao usuarioDao, UsuarioMapper usuarioMapper){
+
+    public UsuarioServiceImpl(UsuarioDao usuarioDao, UsuarioMapper usuarioMapper) {
         this.usuarioDao = usuarioDao;
         this.usuarioMapper = usuarioMapper;
     }
@@ -27,12 +30,15 @@ public class UsuarioServiceImpl implements UsuarioService {
         Usuario usuario = this.usuarioMapper.toUsuarioEntity(dto);
         this.usuarioDao.save(usuario);
     }
+
     @Override
     @Transactional
     public void saveAdmin(PostUsuarioDTO dto) {
-        Usuario registrador = this.usuarioDao.findById(dto.idUsuario()).orElseThrow(() -> new RuntimeException("usuário não encontrado"));
-        if (registrador.getCargo() != Cargo.ADMIN){
-            throw new RuntimeException("usuário não autorizado, apenas administradores podem criar novos administradores");
+        Usuario registrador = this.usuarioDao.findById(dto.idUsuario())
+                .orElseThrow(() -> new RuntimeException("usuário não encontrado"));
+        if (registrador.getCargo() != Cargo.ADMIN) {
+            throw new RuntimeException(
+                    "usuário não autorizado, apenas administradores podem criar novos administradores");
         }
         Usuario usuario = this.usuarioMapper.toUsuarioEntity(dto);
         usuario.setCargo(Cargo.ADMIN);
@@ -46,12 +52,11 @@ public class UsuarioServiceImpl implements UsuarioService {
                 .map(usuario -> new GetUsuariosDTO(usuario.getId(), usuario.getNome(), usuario.getUsername()))
                 .toList();
     }
+
     @Override
-    public List<GetUsuariosDTO> findAllAdmin() {
-        return this.usuarioDao.findAllByCargo(Cargo.ADMIN)
-                .stream()
-                .map(this.usuarioMapper::toDto)
-                .toList();
+    public Page<GetUsuariosDTO> findAllAdmin(Pageable pageable) {
+        return this.usuarioDao.findAllByCargo(Cargo.ADMIN, pageable)
+                .map(this.usuarioMapper::toDto);
     }
 
 }
