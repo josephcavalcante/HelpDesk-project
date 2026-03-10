@@ -3,6 +3,7 @@ package br.edu.ifpb.sr.dac.demo.controller;
 import br.edu.ifpb.sr.dac.demo.dto.GetUsuariosDTO;
 import br.edu.ifpb.sr.dac.demo.dto.PostUsuarioDTO;
 import br.edu.ifpb.sr.dac.demo.service.usuario.UsuarioService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +21,7 @@ public class UsuarioController {
     }
 
     @PostMapping("/administrador")
-    public ResponseEntity<Boolean> postUsuarioAdm(@RequestBody PostUsuarioDTO dto) {
+    public ResponseEntity<Boolean> postUsuarioAdm(@RequestBody @Valid PostUsuarioDTO dto) {
         this.usuarioService.saveAdmin(dto);
         return ResponseEntity.created(URI.create("/1")).body(Boolean.TRUE);
     }

@@ -3,6 +3,7 @@ package br.edu.ifpb.sr.dac.demo.controller;
 import br.edu.ifpb.sr.dac.demo.dto.GetChamadosDTO;
 import br.edu.ifpb.sr.dac.demo.dto.PostChamadoDTO;
 import br.edu.ifpb.sr.dac.demo.service.chamado.ChamadoService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class ChamadoController {
     }
 
     @PostMapping
-    public void postChamado(@RequestBody PostChamadoDTO dto) {
+    public void postChamado(@RequestBody @Valid PostChamadoDTO dto) {
         this.chamadoService.save(dto);
     }
 
