@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/model/Usuario.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/UsuarioMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/UsuarioMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/test-classes/br/edu/ifpb/sr/dac/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/test-classes/br/edu/ifpb/sr/dac/demo/DemoApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

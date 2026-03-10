@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface UsuarioDao extends JpaRepository<Usuario, Long> {
-    List<Usuario> findAllByCargo(Enum<Cargo> cargo);
+    List<Usuario> findAllByCargo(Cargo cargo);
 }

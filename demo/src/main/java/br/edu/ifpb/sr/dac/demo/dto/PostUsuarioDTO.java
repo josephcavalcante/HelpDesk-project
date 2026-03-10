@@ -5,8 +5,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-
-public record PostUsuarioDTO (
+public record PostUsuarioDTO(
         @NotBlank(message = "O nome é obrigatório")
         @Size(min = 3, max = 100, message = "O nome deve ter no mínimo 3 caracteres")
         String nome,
@@ -28,5 +27,5 @@ public record PostUsuarioDTO (
 
         @NotNull(message = "O id do Admin é obrigatório")
         @Positive(message = "O id do Admin deve ser um número positivo")
-        Long idUsuario)  {
+        Long idUsuario) {
 }

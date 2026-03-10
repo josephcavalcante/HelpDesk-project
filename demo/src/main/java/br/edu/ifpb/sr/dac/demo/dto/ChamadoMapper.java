@@ -6,6 +6,8 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface ChamadoMapper {
     GetChamadosDTO toDto(Chamado chamado);
+
     PostChamadoDTO toPostChamadoDto(Chamado chamado);
+
     Chamado toEntity(PostChamadoDTO dto);
 }
