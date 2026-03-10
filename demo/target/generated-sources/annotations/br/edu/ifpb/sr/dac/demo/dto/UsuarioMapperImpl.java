@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-03-06T15:25:23-0300",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.1 (Oracle Corporation)"
+    date = "2026-03-10T12:12:54-0300",
+    comments = "version: 1.6.3, compiler: Eclipse JDT (IDE) 3.45.0.v20260128-0750, environment: Java 21.0.9 (Eclipse Adoptium)"
 )
 @Component
 public class UsuarioMapperImpl implements UsuarioMapper {
@@ -54,16 +54,18 @@ public class UsuarioMapperImpl implements UsuarioMapper {
 
         String nome = null;
         String username = null;
+        String email = null;
         String senha = null;
 
         nome = usuario.getNome();
         username = usuario.getUsername();
+        email = usuario.getEmail();
         senha = usuario.getSenha();
 
         String confirmacaoSenha = null;
         Long idUsuario = null;
 
-        PostUsuarioDTO postUsuarioDTO = new PostUsuarioDTO( nome, username, senha, confirmacaoSenha, idUsuario );
+        PostUsuarioDTO postUsuarioDTO = new PostUsuarioDTO( nome, username, email, senha, confirmacaoSenha, idUsuario );
 
         return postUsuarioDTO;
     }
@@ -79,6 +81,7 @@ public class UsuarioMapperImpl implements UsuarioMapper {
         usuario.setNome( dto.nome() );
         usuario.setUsername( dto.username() );
         usuario.setSenha( dto.senha() );
+        usuario.setEmail( dto.email() );
 
         return usuario;
     }
