@@ -31,4 +31,8 @@ public class Chamado {
     public void setDataAbertura(LocalDateTime now) {
 
     }
+    public void setUsuario(Usuario usuario){
+        this.usuario = usuario;
+    }
+
 }

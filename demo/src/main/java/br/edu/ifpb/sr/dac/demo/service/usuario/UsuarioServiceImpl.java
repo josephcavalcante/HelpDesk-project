@@ -34,11 +34,13 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     @Transactional
     public void saveAdmin(PostUsuarioDTO dto) {
-        Usuario registrador = this.usuarioDao.findById(dto.idUsuario())
-                .orElseThrow(() -> new RuntimeException("usuário não encontrado"));
-        if (registrador.getCargo() != Cargo.ADMIN) {
-            throw new RuntimeException(
-                    "usuário não autorizado, apenas administradores podem criar novos administradores");
+        if (dto.idUsuario() != null) {
+            Usuario registrador = this.usuarioDao.findById(dto.idUsuario())
+                    .orElseThrow(() -> new RuntimeException("usuário não encontrado"));
+            if (registrador.getCargo() != Cargo.ADMIN) {
+                throw new RuntimeException(
+                        "usuário não autorizado, apenas administradores podem criar novos administradores");
+            }
         }
         Usuario usuario = this.usuarioMapper.toUsuarioEntity(dto);
         usuario.setCargo(Cargo.ADMIN);

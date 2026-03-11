@@ -8,10 +8,11 @@ import br.edu.ifpb.sr.dac.demo.dto.PostChamadoDTO;
 import br.edu.ifpb.sr.dac.demo.model.Chamado;
 import br.edu.ifpb.sr.dac.demo.model.Usuario;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Service
 public class ChamadoServiceImpl implements ChamadoService {
@@ -28,7 +29,8 @@ public class ChamadoServiceImpl implements ChamadoService {
     @Override
     @Transactional
     public void save(PostChamadoDTO dto) {
-        Usuario usuario = this.usuarioDao.findById(dto.idUsuario()).orElseThrow(() -> new RuntimeException("Dono do chamado não encontrado"));
+        Usuario usuario = this.usuarioDao.findById(dto.idUsuario())
+                .orElseThrow(() -> new RuntimeException("Dono do chamado não encontrado"));
         Chamado chamado = this.chamadoMapper.toEntity(dto);
         chamado.setUsuario(usuario);
         chamado.setDataAbertura(LocalDateTime.now());
@@ -36,10 +38,8 @@ public class ChamadoServiceImpl implements ChamadoService {
     }
 
     @Override
-    public List<GetChamadosDTO> findAllByUsuario(Long idUsuario) {
-        return this.chamadoDao.findAllByUsuario_Id(idUsuario)
-                .stream()
-                .map(this.chamadoMapper::toDto)
-                .toList();
+    public Page<GetChamadosDTO> findAllByUsuario(Long idUsuario, Pageable pageable) {
+        return this.chamadoDao.findAllByUsuario_Id(idUsuario, pageable)
+                .map(this.chamadoMapper::toDto);
     }
 }
