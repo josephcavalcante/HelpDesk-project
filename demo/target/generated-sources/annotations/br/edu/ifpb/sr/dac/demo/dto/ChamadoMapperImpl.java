@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-03-10T11:43:59-0300",
+    date = "2026-03-11T14:21:26-0300",
     comments = "version: 1.6.3, compiler: Eclipse JDT (IDE) 3.45.0.v20260128-0750, environment: Java 21.0.9 (Eclipse Adoptium)"
 )
 @Component
@@ -65,8 +65,8 @@ public class ChamadoMapperImpl implements ChamadoMapper {
 
         Chamado chamado = new Chamado();
 
-        chamado.setTitulo( dto.titulo() );
         chamado.setDescricao( dto.descricao() );
+        chamado.setTitulo( dto.titulo() );
 
         return chamado;
     }

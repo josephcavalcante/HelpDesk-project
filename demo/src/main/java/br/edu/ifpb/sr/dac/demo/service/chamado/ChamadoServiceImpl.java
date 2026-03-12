@@ -2,16 +2,21 @@ package br.edu.ifpb.sr.dac.demo.service.chamado;
 
 import br.edu.ifpb.sr.dac.demo.dao.ChamadoDao;
 import br.edu.ifpb.sr.dac.demo.dao.UsuarioDao;
+import br.edu.ifpb.sr.dac.demo.dao.specs.ChamadoSpecs;
 import br.edu.ifpb.sr.dac.demo.dto.ChamadoMapper;
 import br.edu.ifpb.sr.dac.demo.dto.GetChamadosDTO;
 import br.edu.ifpb.sr.dac.demo.dto.PostChamadoDTO;
 import br.edu.ifpb.sr.dac.demo.model.Chamado;
+import br.edu.ifpb.sr.dac.demo.model.StatusChamado;
 import br.edu.ifpb.sr.dac.demo.model.Usuario;
 import jakarta.transaction.Transactional;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
+import static br.edu.ifpb.sr.dac.demo.dao.specs.ChamadoSpecs.usuarioIgual;
 
 @Service
 public class ChamadoServiceImpl implements ChamadoService {
@@ -36,8 +41,12 @@ public class ChamadoServiceImpl implements ChamadoService {
     }
 
     @Override
-    public List<GetChamadosDTO> findAllByUsuario(Long idUsuario) {
-        return this.chamadoDao.findAllByUsuario_Id(idUsuario)
+    public List<GetChamadosDTO> find(Long idUsuario, StatusChamado status) {
+        Specification<Chamado> spec = Specification
+                .where(usuarioIgual(idUsuario))
+                .and(ChamadoSpecs.statusIgual(status));
+
+                return this.chamadoDao.findAll(spec)
                 .stream()
                 .map(this.chamadoMapper::toDto)
                 .toList();
