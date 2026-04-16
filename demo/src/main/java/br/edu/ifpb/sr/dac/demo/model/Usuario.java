@@ -2,12 +2,17 @@ package br.edu.ifpb.sr.dac.demo.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import java.util.Objects;
+
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.br.CPF;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

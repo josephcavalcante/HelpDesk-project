@@ -9,6 +9,7 @@ import br.edu.ifpb.sr.dac.demo.model.Usuario;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,16 +19,26 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     private final UsuarioDao usuarioDao;
     private final UsuarioMapper usuarioMapper;
+    private final PasswordEncoder passwordEncoder;
 
-    public UsuarioServiceImpl(UsuarioDao usuarioDao, UsuarioMapper usuarioMapper) {
+
+    public UsuarioServiceImpl(UsuarioDao usuarioDao, UsuarioMapper usuarioMapper, PasswordEncoder passwordEncoder) {
         this.usuarioDao = usuarioDao;
         this.usuarioMapper = usuarioMapper;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
     @Transactional
     public void save(PostUsuarioDTO dto) {
+
+        if (this.usuarioDao.existsByCpf(dto.cpf())) throw new RuntimeException("CPF já cadastrado");
+        if (this.usuarioDao.existsByUsername(dto.username())) throw new RuntimeException("username já cadastrado");
+        if(this.usuarioDao.existsById(dto.idUsuario())) throw new RuntimeException("usuário já cadastrado");
+
         Usuario usuario = this.usuarioMapper.toUsuarioEntity(dto);
+        usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+        usuario.setCargo(Cargo.USUARIO);
         this.usuarioDao.save(usuario);
     }
 
@@ -43,6 +54,7 @@ public class UsuarioServiceImpl implements UsuarioService {
             }
         }
         Usuario usuario = this.usuarioMapper.toUsuarioEntity(dto);
+        usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
         usuario.setCargo(Cargo.ADMIN);
         this.usuarioDao.save(usuario);
     }
