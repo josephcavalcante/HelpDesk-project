@@ -11,7 +11,6 @@ public interface UsuarioMapper {
     Usuario toEntity(GetUsuariosDTO userDTO);
 
     @Mapping(target = "confirmacaoSenha", ignore = true)
-    @Mapping(target = "idUsuario", ignore = true)
     PostUsuarioDTO toPostUsuarioDto(Usuario usuario);
 
     Usuario toUsuarioEntity(PostUsuarioDTO dto);

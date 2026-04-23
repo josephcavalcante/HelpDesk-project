@@ -9,7 +9,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
 import java.net.URI;
 
 @RestController
@@ -23,12 +28,19 @@ public class UsuarioController {
     }
 
     @PostMapping("/administrador")
-    public ResponseEntity<Boolean> postUsuarioAdm(@RequestBody @Valid PostUsuarioDTO dto) {
-        this.usuarioService.saveAdmin(dto);
-        return ResponseEntity.created(URI.create("/1")).body(Boolean.TRUE);
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<Void> postUsuarioAdm(@RequestBody @Valid PostUsuarioDTO dto, @AuthenticationPrincipal Jwt jwt) {
+        Long idRegistrador = Long.parseLong(jwt.getSubject());
+        Long id = this.usuarioService.saveAdmin(dto, idRegistrador);
+        URI uri = ServletUriComponentsBuilder.fromCurrentContextPath()
+                .path("/v1/usuarios/{id}")
+                .buildAndExpand(id)
+                .toUri();
+        return ResponseEntity.created(uri).build();
     }
 
     @GetMapping("/administrador")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Page<GetUsuariosDTO>> getAllUsuariosAdmin(
             @PageableDefault(size = 10, sort = "nome", direction = Sort.Direction.ASC) Pageable pageable) {
         return ResponseEntity.ok(this.usuarioService.findAllAdmin(pageable));

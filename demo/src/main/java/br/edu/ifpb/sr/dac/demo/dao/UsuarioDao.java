@@ -9,6 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface UsuarioDao extends JpaRepository<Usuario, Long> {
     Page<Usuario> findAllByCargo(Cargo cargo, Pageable page);
@@ -16,4 +18,8 @@ public interface UsuarioDao extends JpaRepository<Usuario, Long> {
     Boolean existsByCpf(@CPF String cpf);
 
     boolean existsByUsername(@NotBlank(message = "username não pode ser vazio") String username);
+
+    Optional<Usuario> findByEmail(String email);
+
+    boolean existsByEmail(String email);
 }

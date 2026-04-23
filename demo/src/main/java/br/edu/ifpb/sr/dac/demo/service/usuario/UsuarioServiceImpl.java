@@ -9,6 +9,8 @@ import br.edu.ifpb.sr.dac.demo.model.Usuario;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -30,33 +32,37 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     @Transactional
-    public void save(PostUsuarioDTO dto) {
-
+    public Long save(PostUsuarioDTO dto) {
         if (this.usuarioDao.existsByCpf(dto.cpf())) throw new RuntimeException("CPF já cadastrado");
         if (this.usuarioDao.existsByUsername(dto.username())) throw new RuntimeException("username já cadastrado");
-        if(this.usuarioDao.existsById(dto.idUsuario())) throw new RuntimeException("usuário já cadastrado");
+        if (this.usuarioDao.existsByEmail(dto.email())) throw new RuntimeException("email já cadastrado");
 
         Usuario usuario = this.usuarioMapper.toUsuarioEntity(dto);
         usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
         usuario.setCargo(Cargo.USUARIO);
-        this.usuarioDao.save(usuario);
+        return this.usuarioDao.save(usuario).getId();
     }
 
     @Override
     @Transactional
-    public void saveAdmin(PostUsuarioDTO dto) {
-        if (dto.idUsuario() != null) {
-            Usuario registrador = this.usuarioDao.findById(dto.idUsuario())
-                    .orElseThrow(() -> new RuntimeException("usuário não encontrado"));
+    public Long saveAdmin(PostUsuarioDTO dto, Long idRegistrador) {
+        if (idRegistrador != null) {
+            Usuario registrador = this.usuarioDao.findById(idRegistrador)
+                    .orElseThrow(() -> new RuntimeException("usuário registrador não encontrado"));
             if (registrador.getCargo() != Cargo.ADMIN) {
                 throw new RuntimeException(
                         "usuário não autorizado, apenas administradores podem criar novos administradores");
             }
         }
+        
+        if (this.usuarioDao.existsByCpf(dto.cpf())) throw new RuntimeException("CPF já cadastrado");
+        if (this.usuarioDao.existsByUsername(dto.username())) throw new RuntimeException("username já cadastrado");
+        if (this.usuarioDao.existsByEmail(dto.email())) throw new RuntimeException("email já cadastrado");
+
         Usuario usuario = this.usuarioMapper.toUsuarioEntity(dto);
         usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
         usuario.setCargo(Cargo.ADMIN);
-        this.usuarioDao.save(usuario);
+        return this.usuarioDao.save(usuario).getId();
     }
 
     @Override
@@ -71,6 +77,12 @@ public class UsuarioServiceImpl implements UsuarioService {
     public Page<GetUsuariosDTO> findAllAdmin(Pageable pageable) {
         return this.usuarioDao.findAllByCargo(Cargo.ADMIN, pageable)
                 .map(this.usuarioMapper::toDto);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        return this.usuarioDao.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado com o email: " + email));
     }
 
 }

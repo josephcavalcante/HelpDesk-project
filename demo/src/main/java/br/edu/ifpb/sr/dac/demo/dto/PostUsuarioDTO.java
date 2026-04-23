@@ -1,12 +1,7 @@
 package br.edu.ifpb.sr.dac.demo.dto;
 
-import lombok.Data;
-
-import java.io.Serializable;
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import org.hibernate.validator.constraints.br.CPF;
 
@@ -31,7 +26,6 @@ public record PostUsuarioDTO(
         String senha,
 
         @NotBlank(message = "confirmação de senha não pode ser vazio")
-        String confirmacaoSenha,
-        @NotNull(message = "idUsuario não pode ser nulo")
-        Long idUsuario) {
+        String confirmacaoSenha
+) {
 }

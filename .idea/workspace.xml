@@ -4,47 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model/PrioridadeChamado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model/StatusChamado.java" afterDir="false" />
+    <list default="true" id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="atualização de segurança, como melhorias em geral">
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/ChamadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/ChamadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostChamadoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostChamadoDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/UsuarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/dto/UsuarioMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/db/changelog/changesets/001-create-table-usuario.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/db/changelog/db.changelog-master.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/AdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/ChamadoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/HelloWorldController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/TokenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/chamado/ChamadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/chamado/ChamadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/chamado/ChamadoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/chamado/ChamadoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/service/usuario/UsuarioServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/controller/UsuarioController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dao/UsuarioDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/GetChamadosDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostAdminDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostChamadoDTO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/PostUsuarioDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/dto/UsuarioMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/model/Cargo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/model/Chamado.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/model/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/service/AdminService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/service/AdminServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/service/ChamadoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/service/ChamadoServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/service/UsuarioService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/br/edu/ifpb/sr/dac/demo/service/UsuarioServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/db/changelog/changesets/001-create-table-usuario.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/db/changelog/db.changelog-master.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/ChamadoMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/UsuarioMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/generated-sources/annotations/br/edu/ifpb/sr/dac/demo/dto/UsuarioMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/surefire-reports/TEST-br.edu.ifpb.sr.dac.demo.DemoApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/surefire-reports/br.edu.ifpb.sr.dac.demo.DemoApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/test-classes/br/edu/ifpb/sr/dac/demo/DemoApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +50,27 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="com.intellij.jpb.JpaEntity" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "josephcavalcante"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/josephcavalcante/HelpDesk-project.git",
+    "accountId": "2c36cfb0-3ab9-4067-b653-c3198541f45e"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/demo/src/main/java/br/edu/ifpb/sr/dac/demo/controller/ChamadoController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -106,6 +112,9 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="ReadonlyStatusHandler">
+    <option name="SHOW_DIALOG" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nicho\Downloads\HelpDesk\demo\src\main\java\br\edu\ifpb\sr\dac\demo\model" />
@@ -130,11 +139,12 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
       </set>
     </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4c557612-16dd-4bdb-a5e5-0e6f0fef93eb" name="Changes" comment="" />
@@ -145,6 +155,7 @@
       <workItem from="1772031216009" duration="348000" />
       <workItem from="1772818821968" duration="3833000" />
       <workItem from="1773052510174" duration="2188000" />
+      <workItem from="1776894387298" duration="8172000" />
     </task>
     <servers />
   </component>
@@ -161,6 +172,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="atualização de segurança, como melhorias em geral" />
+    <option name="LAST_COMMIT_MESSAGE" value="atualização de segurança, como melhorias em geral" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

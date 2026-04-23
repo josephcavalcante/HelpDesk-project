@@ -1,19 +1,23 @@
 package br.edu.ifpb.sr.dac.demo.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import java.util.Objects;
-
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.br.CPF;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
 
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
+public class Usuario implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,21 +25,59 @@ public class Usuario {
     @Column (nullable = false)
     private String nome;
     
-    @Column (nullable = false)
+    @Column (nullable = false, unique = true)
     private String username;
     
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
     
     @Column (nullable = false)
     private String senha;
     
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     @CPF
     private String cpf;
 
     @Enumerated(EnumType.STRING)
     private Cargo cargo;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        if (this.cargo == Cargo.ADMIN) {
+            return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
+        }
+        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+    }
+
+    @Override
+    public String getPassword() {
+        return senha;
+    }
+
+    @Override
+    public String getUsername() {
+        return email; // Or username, depending on how you want to login. Usually email is used.
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -47,20 +89,4 @@ public class Usuario {
     public int hashCode() {
         return Objects.hashCode(id);
     }
-    public Cargo getCargo(){
-        return this.cargo;
-    }
-    public void setCargo(Cargo cargo){
-        this.cargo=cargo;
-    }
-    public Long getId(){
-        return this.id;
-    }
-    public String getNome(){
-        return this.nome;
-    }
-    public String getUsername(){
-        return this.username;
-    }
-
 }

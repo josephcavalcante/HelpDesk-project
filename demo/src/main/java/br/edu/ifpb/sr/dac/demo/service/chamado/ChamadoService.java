@@ -6,6 +6,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface ChamadoService {
-    void save(PostChamadoDTO dto);
+    Long save(PostChamadoDTO dto, Long idUsuario);
     Page<GetChamadosDTO> findAllByUsuario(Long idUsuario, Pageable pageable);
 }

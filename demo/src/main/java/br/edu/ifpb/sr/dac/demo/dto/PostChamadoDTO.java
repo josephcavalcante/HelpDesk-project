@@ -1,5 +1,7 @@
 package br.edu.ifpb.sr.dac.demo.dto;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -11,8 +13,8 @@ public record PostChamadoDTO(
         String descricao,
 
         @NotNull(message = "prioridade não pode ser nula")
-        Integer prioridade,
-
-        @NotNull(message = "idUsuario não pode ser nulo")
-        Long idUsuario) {
+        @Min(value = 0, message = "Prioridade deve ser positiva")
+        @Max(value = 5, message = "Prioridade máxima é cinco")
+        Integer prioridade
+        ) {
 }
